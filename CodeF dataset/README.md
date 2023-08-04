@@ -14,3 +14,12 @@ During the data acquisition process, we endeavoured to ensure the consistency of
 • Based on the date tag, we partitioned CodeF into two subsets: CodeF Pre2021-9 and CodeF Post2021-9.
 
 According to the cutoff date of ChatGPT’s training data - September 2021, we partitioned the dataset into CodeF pre2021-9 (comprising 805 problems) and CodeF post2021-9 (consisting of 718 problems). The difficulty level of all problems is denoted in the format “*xxx” (ranging from *800-*31003).
+
+| Dataset    |  Difficulty | Difficulty Range  |  Problem Number |
+|------------|----------|-------|------|
+|CodeF Post2021-9  | Simple | *800        | 000-099  |
+| CodeF Post2021-9 | Medium | *1300-*1600 | 400-499  |
+| CodeF Post2021-9 | Hard   | *1900-*2500 | 600-699  |
+| CodeF Pre2021-9  | Simple | *800        | 000-099  |
+| CodeF Pre2021-9  | Medium | *1300-*1600 | 400-499  |
+| CodeF Pre2021-9  | Hard   | *1900-*2200 | 640-739  |
