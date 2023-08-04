@@ -1,1 +1,16 @@
 ## CodeF
+We construct an entirely new dataset, CodeF. Taking September 2021 (the cutoff date for ChatGPT’s training data) as the node, we divided this dataset into two parts: CodeF pre2021-9 which comprises problems that ChatGPT might have encountered during its training, CodeF post2021-9 which consists of problems that ChatGPT would not have previously seen.
+
+CodeF incorporates 1523 problems posted from January 2020 to April 2023 on the CodeForces programming website. The creation of CodeF primarily involves two phases: data acquisition and processing. 
+
+During the data acquisition phase, we evaluated several programming contest platforms, including Codeforces, HackerRank and Geeksforgeeks. Factors such as legal restrictions, interface complexities of the platforms and our specific requirement for algorithms and data structures tag for the problems, as well as the release time information, led us to select CodeForces (a programming competition website) as our data source. In order to ensure dataset quality, we designed an HTML parser specifically tailored for the CodeForces site. We crawled the site for problem description, solution, input and output examples and a set of associated labels, which include difficulty, date and tag (indicating algorithms and data structures suitable for solving the problem), etc.
+
+During the data acquisition process, we endeavoured to ensure the consistency of our data with that of the CodeForces website. However, since the code was sourced from user submissions, often embedded with comments and potential error codes, we implemented the following measures during the data processing phase: 
+
+• To render CodeF more orderly, we employed Abstract Syntax Tree (AST) parsing to remove comment nodes from code that was heavily annotated. 
+
+• Even though we extracted code that was tested and verifiedas correct by the website, we conducted unit tests on all code to prevent errors during parsing. This step assuredthe accuracy of the test samples and code. 
+
+• Based on the date tag, we partitioned CodeF into two subsets: CodeF Pre2021-9 and CodeF Post2021-9.
+
+According to the cutoff date of ChatGPT’s training data - September 2021, we partitioned the dataset into CodeF pre2021-9 (comprising 805 problems) and CodeF post2021-9 (consisting of 718 problems). The difficulty level of all problems is denoted in the format “*xxx” (ranging from *800-*31003).
