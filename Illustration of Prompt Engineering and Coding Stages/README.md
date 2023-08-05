@@ -7,8 +7,8 @@ Consequently, we partition the workflow of KareCoder into two stages, Prompt Eng
 • In the Coding Stage, we assign ChatGPT the role of a coder, tasked with perusing the problem and implementing this solution in a programming language, guided by the prompt provided by the prompt engineer.
 
 # You can see the full details in Figures 6 and 7 of our article here
-## Example 1
-### Problem (Q)：
+## 1. Example 1
+### (1) Problem (Q)：
 You are given a grid with $n$ rows and $m$ columns. We denote the square on the $i$-th ($1\le i\le n$) row and $j$-th ($1\le j\le m$) column by $(i, j)$ and the number there by $a_{ij}$. All numbers are equal to $1$ or to $-1$.
 
 You start from the square $(1, 1)$ and can move one square down or one square to the right at a time. In the end, you want to end up at the square $(n, m)$.
@@ -60,13 +60,13 @@ NO
 -----Note-----
 
 One possible path for the fourth test case is given in the picture in the statement.
-### Knowledge Description (K'):
+### (2) Knowledge Description (K'):
 "DP":"DP, or dynamic programming, is a technique used to solve complex problems by breaking them down into smaller, simpler sub-problems. It involves solving each sub-problem only once and storing the solutions in a table for future use. DP is used in optimization problems where the goal is to find the optimal solution among many possible solutions. It is often more efficient than brute force or other methods, but requires careful analysis and design of the sub-problems. DP is commonly used in fields such as computer science, engineering, and finance."
 
 "Data Structures":"Data structures are arrangements of data in a computer's memory that enable efficient access, storage, and manipulation of information. They provide a means for organizing and managing data, and are essential for efficient algorithm design. Examples of data structures include arrays, linked lists, stacks, queues, trees, and graphs. Each data structure has its own advantages and disadvantages, and selecting the appropriate structure depends on the nature of the data and the operations to be performed on it."
 
 "Brute Force":"Brute force is a straightforward approach to problem-solving that exhaustively searches all possible solutions. It involves systematically testing each possible solution until the correct one is found. This approach is often used when the problem size is small, or when other methods are not feasible. Brute force can be computationally expensive and impractical for large-scale problems, but it is guaranteed to find the optimal solution, if one exists. It is commonly used in algorithm design for testing and benchmarking."
-### Knowledge-aware Prompt (P):
+### (3) Knowledge-aware Prompt (P):
 1.Read t, the number of test cases.
 
 2.Loop t times to read each test cases.
@@ -86,7 +86,7 @@ One possible path for the fourth test case is given in the picture in the statem
 9.Check the (n+m-1)//2 bit of dp[-1]. If it is 1, print "YES"; otherwise, print "NO".
 
 10.End all loop.
-### Solution Code (C):
+### (4) Solution Code (C):
 ```python  
 for case in range(int(input())):
     n, m = map(int, input().split())
@@ -105,8 +105,8 @@ for case in range(int(input())):
         print("NO")
 ```
 
-## Example 2
-### Problem (Q)：
+## 2. Example 2
+### (1) Problem (Q)：
 There is a string $s$ of length $3$, consisting of uppercase and lowercase English letters. Check if it is equal to "YES" (without quotes), where each letter can be in any case. For example, "yES", "Yes", "yes" are all allowable.
 
 -----Input-----
@@ -150,13 +150,13 @@ NO
 -----Note-----
 
 The first five test cases contain the strings "YES", "yES", "yes", "Yes", "YeS". All of these are equal to "YES", where each character is either uppercase or lowercase.
-### Knowledge Description (K'):
+### (2) Knowledge Description (K'):
 "Brute Force":"Brute force is a straightforward approach to problem-solving that exhaustively searches all possible solutions. It involves systematically testing each possible solution until the correct one is found. This approach is often used when the problem size is small, or when other methods are not feasible. Brute force can be computationally expensive and impractical for large-scale problems, but it is guaranteed to find the optimal solution, if one exists. It is commonly used in algorithm design for testing and benchmarking."
 
 "Strings":"Strings are sequences of characters used to represent text or other data in a computer program. String algorithms are used to manipulate and process strings, such as searching for substrings, replacing characters, and comparing two strings. String algorithms can be simple or complex, and may require specialized techniques such as pattern matching or regular expressions. They are used in a variety of applications, including text processing, natural language processing, and data analysis. Proper selection and implementation of string algorithms can significantly impact the performance and functionality of a software system."
 
 "Implementation":"Implementation is the process of translating a design or specification into a working program. It involves writing code, compiling and testing the program, and integrating it with other systems. Implementation also includes documenting the code and providing user support. Good implementation requires attention to detail, adherence to coding standards, and the ability to adapt to changing requirements. Effective implementation leads to a reliable and maintainable software system."
-## Knowledge-aware Prompt (P):
+## (3) Knowledge-aware Prompt (P):
 1.Read t, the number of test cases.
 
 2.Loop t times to read each test case string s.
@@ -168,7 +168,7 @@ The first five test cases contain the strings "YES", "yES", "yes", "Yes", "YeS".
 5.If it is, print "YES". Otherwise, print "NO".
 
 6.End the loop."
-### Solution Code (C):
+### (4) Solution Code (C):
 ```python  
 t = int(input())
 for i in range(t):
