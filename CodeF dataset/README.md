@@ -28,6 +28,8 @@ According to the cutoff date of ChatGPT’s training data - September 2021, we p
 
 In order to explore the rules of different difficulty problems, we classified the datasets according to the level of difficulty and extracted one hundred problems each from the Simple, Medium and Hard difficulty categories from both datasets.
 
+<div align="center">
+
 | Dataset    |  Difficulty | Difficulty Range  |  Problem Number |
 |------------|----------|-------|------|
 |CodeF Post2021-9  | Simple | *800        | 000-099  |
@@ -36,3 +38,6 @@ In order to explore the rules of different difficulty problems, we classified th
 | CodeF Pre2021-9  | Simple | *800        | 000-099  |
 | CodeF Pre2021-9  | Medium | *1300-*1600 | 400-499  |
 | CodeF Pre2021-9  | Hard   | *1900-*2200 | 640-739  |
+
+</div>
+
