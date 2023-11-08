@@ -3,7 +3,18 @@ We construct an entirely new dataset, CodeF. Taking September 2021 (the cutoff d
 
 CodeF incorporates 1523 problems posted from January 2020 to April 2023 on the CodeForces programming website. The creation of CodeF primarily involves two phases: data acquisition and processing. 
 
-During the data acquisition phase, we evaluated several programming contest platforms, including Codeforces, HackerRank and Geeksforgeeks. Factors such as legal restrictions, interface complexities of the platforms and our specific requirement for algorithms and data structures tag for the problems, as well as the release time information, led us to select CodeForces (a programming competition website) as our data source. In order to ensure dataset quality, we designed an HTML parser specifically tailored for the CodeForces site. We crawled the site for problem description, solution, input and output examples and a set of associated labels, which include difficulty, date and tag (indicating algorithms and data structures suitable for solving the problem), etc.
+During the data acquisition phase, we evaluated several programming contest platforms, including Codeforces, HackerRank and Geeksforgeeks. Factors such as legal restrictions, interface complexities of the platforms and our specific requirement for algorithms and data structures tag for the problems, as well as the release time information, led us to select CodeForces (a programming competition website) as our data source. In order to ensure dataset quality, we designed an HTML parser specifically tailored for the CodeForces site. We crawled the site for problem description, solution, input and output examples and a set of associated labels, which include difficulty, date and tag (indicating algorithms and data structures suitable for solving the problem), etc. We consolidated all the problems into a standardized format. Figure 1 below
+presents a sample of the collected problems.
+
+
+
+<div align="center">
+  <img src="https://github.com/CodeGeneration3/KareCoder/blob/main/CodeF%20dataset/Example%20of%20a%20programming%20problem.png?raw=true" width="659" height="445" alt="Example of a programming problem">
+  <br>
+  <p> Figure 1: Example of a programming problem (including problem description, Input/Output format and example, solution code, labels and other information).</p>
+</div>
+
+
 
 During the data acquisition process, we endeavoured to ensure the consistency of our data with that of the CodeForces website. However, since the code was sourced from user submissions, often embedded with comments and potential error codes, we implemented the following measures during the data processing phase: 
 
