@@ -26,8 +26,11 @@ During the data acquisition process, we endeavoured to ensure the consistency of
 
 According to the cutoff date of ChatGPT’s training data - September 2021, we partitioned the dataset into CodeF pre2021-9 (comprising 805 problems) and CodeF post2021-9 (consisting of 718 problems). The difficulty level of all problems is denoted in the format “*xxx” (ranging from *800-*31003).
 
-In order to explore the rules of different difficulty problems, we classified the datasets according to the level of difficulty and extracted one hundred problems each from the Simple, Medium and Hard difficulty categories from both datasets.
+In order to explore the rules of different difficulty problems, we classified the datasets according to the level of difficulty and extracted one hundred problems each from the Simple, Medium and Hard difficulty categories from both datasets. The specific divisions are shown in Table 1. In addition, in order to visualize the difficulty distributions of all the problems in CodeF Pre2021-9 and CodeF Post2021-9, we also provide a table of the difficulty distributions of all the problems, which can be found in "Difficulty distributions of CodeF.xlsx ".
 
+<div align="center">
+Table 1: Subset of Simple, Medium, and Hard difficulties in CodeF Post2021-9 and CodeF Pre2021-9 datasets.
+</div>
 <div align="center">
 
 | Dataset    |  Difficulty | Difficulty Range  |  Problem Number |
